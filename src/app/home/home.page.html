@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="block" (click)="scheduleNotification()">Schedule</ion-button>
+  <ion-button expand="block" (click)="recurringNotification()">EveryMinute</ion-button>
+  <ion-button expand="block" (click)="repeatingNotification()">Daily</ion-button>
+  <ion-button expand="block" (click)="GetAll()">Get All</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let n of scheduled">
+        {{n.id}} - {{n.title}}
+        <p>Trigger: {{n.trigger | json}}</p>
+    </ion-item>
+  </ion-list>
+   
+</ion-content>
