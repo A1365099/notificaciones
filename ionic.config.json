@@ -1,0 +1,8 @@
+{
+  "name": "notifApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
